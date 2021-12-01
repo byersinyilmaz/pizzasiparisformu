@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PİZZA SİPARİŞ FORMU
+    </title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <h3>PİZZA SİPARİŞ FORMU</h3><br><br>
+        <form action="" id="formPizza">
+            <label for="listePizza" style="color: white;">Pizza boyutunu seçiniz</label><br><br>
+            <select name="" id="listePizza" class="form-select form-select-sm" aria-label=".form-select-sm example">
+                <option value="20">Küçük Boy</option>
+                <option value="30">Orta Boy</option>
+                <option value="40">Büyük Boy</option>
+                <option value="50">Süper Boy</option>
+            </select> <br><br>
+            <label style="color: white;" for="grupEkMalzeme">Ek malzeme seçiniz</label><br><br>
+            <span>
+                <label class="form-check-label" for="mal1">Yeşil zeytin</label>
+                <input class="form-check-input" type="checkbox" name="grupEkMalzeme" id="mal1" value="Yeşil zeytin">
+                <label class="form-check-label" for="mal2">Siyah zeytin</label>
+                <input class="form-check-input" type="checkbox" name="grupEkMalzeme" id="mal2" value="Siyah zeytin">
+                <label class="form-check-label" for="mal3">Mantar</label>
+                <input class="form-check-input" type="checkbox" name="grupEkMalzeme" id="mal3" value="Mantar">
+                <label class="form-check-label" for="mal4">Pastırma</label>
+                <input class="form-check-input" type="checkbox" name="grupEkMalzeme" id="mal4" value="Pastırma">
+                <label class="form-check-label" for="mal5">Sucuk</label>
+                <input class="form-check-input" type="checkbox" name="grupEkMalzeme" id="mal5" value="Sucuk">
+                <label class="form-check-label" for="mal6">Sosis</label>
+                <input class="form-check-input" type="checkbox" name="grupEkMalzeme" id="mal6" value="Sosis">
+            </span><br><br>
+
+            <label for="listeEkSecimler" style="color: white;">Seçilen Ek Malzemeler</label><br><br>
+            <select name="" id="listeEkSecimler" class="form-select" multiple aria-label="multiple select example">
+
+            </select><br><br>
+            <!-- <label for="grupIndirim">İndirim Tipini Giriniz</label> --><br>
+            <span>
+                <label for="kodTrue">İndirim Kodum Var</label>
+                <input type="radio" name="grupIndirim" id="kodTrue" value="Aktif" onchange="toogle();">
+                <label for="kodFalse">İndirim Kodum Yok</label>
+                <input type="radio" name="grupIndirim" id="kodFalse" value="Pasif" onchange="toogle();" checked>
+            </span><br><br>
+            <label for="txtIndirimKodu" style="color: white;">İndirim Kodunu Giriniz:</label>
+            <input class="input-group-text" type="text" name="" id="txtIndirimKodu" disabled><br><br>
+            <h4 id="dogrulama"></h4><br>
+            <input type="button" class="btn btn-warning" value="Hesapla" id="btnHesapla"
+                onclick="pizzaHesapla();"><br><br>
+
+
+            <h5 id="sonuc"></h5>
+    </div>
+    <script src="main.js"></script>
+</body>
+
+</html>
